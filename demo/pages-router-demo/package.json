@@ -1,0 +1,28 @@
+{
+  "name": "next-build-filter-pages-router-demo",
+  "version": "1.0.0",
+  "description": "Demo project for next-build-filter plugin using Pages Router",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:filtered": "FILTER_PAGES=true next build",
+    "start": "next start",
+    "lint": "next lint",
+    "demo": "node demo.js"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "next-build-filter": "file:../../"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "typescript": "^5.0.0"
+  }
+}

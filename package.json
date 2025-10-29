@@ -1,0 +1,51 @@
+{
+  "name": "next-build-filter",
+  "version": "0.1.0",
+  "description": "A Next.js plugin to exclude pages/routes during build without removing files. Supports both Pages Router and App Router (Next.js 13+).",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build",
+    "build": "echo \"No build process needed for now\""
+  },
+  "keywords": [
+    "nextjs",
+    "next.js",
+    "webpack",
+    "plugin",
+    "build",
+    "filter",
+    "pages",
+    "app-router",
+    "pages-router",
+    "optimization",
+    "bundle"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "next": ">=12.0.0",
+    "react": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/next-build-filter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/next-build-filter/issues"
+  },
+  "homepage": "https://github.com/your-username/next-build-filter#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
