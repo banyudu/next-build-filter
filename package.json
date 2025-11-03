@@ -11,8 +11,13 @@
     "README.md"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "node tests/e2e/run-e2e-tests.js",
+    "test:all": "npm run test && npm run test:e2e",
     "prepublishOnly": "npm run build",
+    "postversion": "npm publish",
     "build": "echo \"No build process needed for now\""
   },
   "keywords": [
@@ -26,25 +31,33 @@
     "app-router",
     "pages-router",
     "optimization",
-    "bundle"
+    "bundle",
+    "glob",
+    "pattern-matching",
+    "wildcard"
   ],
-  "author": "",
+  "author": "banyudu <banyudu@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "next": ">=12.0.0",
     "react": ">=17.0.0"
   },
+  "dependencies": {
+    "minimatch": "^9.0.0"
+  },
   "devDependencies": {
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "vitest": "^1.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/next-build-filter.git"
+    "url": "git+https://github.com/banyudu/next-build-filter.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/next-build-filter/issues"
+    "url": "https://github.com/banyudu/next-build-filter/issues"
   },
-  "homepage": "https://github.com/your-username/next-build-filter#readme",
+  "homepage": "https://github.com/banyudu/next-build-filter#readme",
   "engines": {
     "node": ">=16.0.0"
   }

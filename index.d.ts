@@ -11,13 +11,24 @@ declare module 'next-build-filter' {
     /** Apply filtering in development mode */
     enableInDev?: boolean;
     
-    /** Pages to include (if specified, only these will be built) */
+    /** 
+     * Pages to include (if specified, only these will be built)
+     * Supports glob patterns: 'admin/**', 'blog/*', '*\/test'
+     * @example ['index', 'about', 'blog/**', 'products/*']
+     */
     includedPages?: string[];
     
-    /** Pages to exclude from build */
+    /** 
+     * Pages to exclude from build
+     * Supports glob patterns: 'admin/**', 'dev/*', '*\/internal'
+     * @example ['admin/**', 'dev/**', '*\/test']
+     */
     excludedPages?: string[];
     
-    /** Regex patterns for page exclusion */
+    /** 
+     * Regex patterns for advanced page exclusion
+     * @example ['dev/.*', '.*admin.*', '^api/v[0-9]+/']
+     */
     excludePatterns?: string[];
     
     /** Pages directory name (default: 'pages') */

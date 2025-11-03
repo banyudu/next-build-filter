@@ -12,18 +12,19 @@ const filterConfig = {
   supportAppRouter: true,
   supportPagesRouter: false, // Only App Router for this demo
   
-  // Exclude specific routes
+  // Exclude specific routes (supports glob patterns)
   excludedPages: [
-    'admin',           // Exclude /admin route
-    'dev/debug',       // Exclude /dev/debug route
-    // 'contact',      // Uncomment to exclude contact route
-    // 'blog',         // Uncomment to exclude blog route
+    'admin',           // Exact: Exclude admin route
+    'dev/**',          // Glob: Exclude all routes under /dev
+    // 'contact',      // Exact: Exclude contact route
+    // 'blog/*',       // Glob: Exclude direct children of /blog
+    // '**/test',      // Glob: Exclude any route ending with /test
   ],
   
-  // Use regex patterns to exclude routes
+  // Use regex patterns for advanced exclusion (alternative to glob)
   excludePatterns: [
-    'dev/.*',          // Exclude all routes in dev/ directory
-    '.*admin.*',       // Exclude any route with 'admin' in the path
+    // 'dev/.*',       // Regex: Exclude all routes in dev/ directory
+    // '.*admin.*',    // Regex: Exclude any route with 'admin' in the path
   ],
   
   // Don't filter in development mode (set to true if you want filtering in dev)

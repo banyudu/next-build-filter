@@ -8,24 +8,27 @@ const filterConfig = {
   // Enable verbose logging to see what's being filtered
   verbose: true,
   
-  // Option 1: Exclude specific pages (uncomment to use)
+  // Option 1: Exclude specific pages (supports glob patterns)
   excludedPages: [
-    'admin',           // Exclude /admin page
-    'dev/debug',       // Exclude /dev/debug page
-    // 'contact',      // Uncomment to exclude contact page
-    // 'blog',         // Uncomment to exclude blog page
+    'admin',           // Exact: Exclude admin page
+    'dev/**',          // Glob: Exclude all pages under /dev
+    // 'contact',      // Exact: Exclude contact page
+    // 'blog/*',       // Glob: Exclude direct children of /blog
+    // '**/test',      // Glob: Exclude any page ending with /test
   ],
   
-  // Option 2: Include only specific pages (uncomment to use instead of excludedPages)
+  // Option 2: Include only specific pages (supports glob patterns)
   // includedPages: [
-  //   'index',         // Only include home page
-  //   'about',         // Only include about page
+  //   'index',         // Exact: Only include home page
+  //   'about',         // Exact: Only include about page
+  //   'blog/**',       // Glob: Include all blog pages
+  //   'products/*',    // Glob: Include direct product pages
   // ],
   
-  // Option 3: Use regex patterns to exclude pages
+  // Option 3: Use regex patterns for advanced exclusion (alternative to glob)
   excludePatterns: [
-    'dev/.*',          // Exclude all pages in dev/ directory
-    '.*admin.*',       // Exclude any page with 'admin' in the path
+    // 'dev/.*',       // Regex: Exclude all pages in dev/ directory
+    // '.*admin.*',    // Regex: Exclude any page with 'admin' in the path
   ],
   
   // Don't filter in development mode (set to true if you want filtering in dev)
