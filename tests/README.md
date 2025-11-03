@@ -236,7 +236,7 @@ The test suite is designed to be easily integrated into CI/CD pipelines:
 ### Unit Tests Failing
 
 - Ensure `minimatch` is installed: `npm install`
-- Check Node.js version (>=16.0.0)
+- Check Node.js version (>=18.0.0)
 - Run with verbose output: `npm run test:watch`
 
 ### E2E Tests Failing
