@@ -1,6 +1,6 @@
 {
   "name": "next-build-filter",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A Next.js plugin to exclude pages/routes during build without removing files. Supports both Pages Router and App Router (Next.js 13+).",
   "main": "index.js",
   "types": "index.d.ts",
