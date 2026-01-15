@@ -37,10 +37,7 @@ const filterConfig = {
 
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: false
-  },
-  
+
   // Add custom webpack configuration
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Add any additional webpack configuration here
